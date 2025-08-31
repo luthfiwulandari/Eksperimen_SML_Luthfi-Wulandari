@@ -1,7 +1,5 @@
 # Eksperimen_SML_Luthfi-Wulandari
 
-# Eksperimen SML - Luthfi Wulandari
-
 Project ini merupakan bagian dari submission kelas Machine Learning Terapan Dicoding.
 
 ## Struktur Folder
