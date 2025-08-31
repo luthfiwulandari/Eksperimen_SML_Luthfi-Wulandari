@@ -1,1 +1,29 @@
+name: Preprocessing Workflow
+
+on:
+  push:
+    paths:
+      - preprocessing/**
+      - namadataset_raw/**
+
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r preprocessing/requirements.txt
+
+      - name: Run preprocessing script
+        run: |
+          python preprocessing/automate_Luthfi-Wulandari.py
 
