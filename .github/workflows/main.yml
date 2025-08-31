@@ -21,7 +21,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        # Tambahkan dependency lain jika diperlukan
 
-    - name: Run preprocessing script
-      run: python preprocessing.py
+    - name: Run automate script
+      run: python automate_Luthfi-Wulandari.py
