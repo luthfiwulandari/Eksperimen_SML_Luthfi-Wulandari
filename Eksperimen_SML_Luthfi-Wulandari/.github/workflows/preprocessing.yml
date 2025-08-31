@@ -2,7 +2,11 @@
 name: Preprocessing Workflow
 
 on:
-  push
+  push:
+    paths:
+      - preprocessing/**
+      - namadataset_raw/**
+
 
 jobs:
   preprocess:
