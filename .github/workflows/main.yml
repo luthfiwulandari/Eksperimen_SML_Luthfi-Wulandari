@@ -1,2 +1,27 @@
 name: Run preprocessing
-run: python preprocessing.py
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  preprocessing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.7'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        # Tambahkan dependency lain jika diperlukan
+
+    - name: Run preprocessing script
+      run: python preprocessing.py
